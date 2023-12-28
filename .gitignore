@@ -33,6 +33,7 @@ wheels/
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+.env
 
 # Installer logs
 pip-log.txt
@@ -41,6 +42,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 htmlcov-py36/
+htmlcov-py311/
 .tox/
 .coverage
 .coverage.*

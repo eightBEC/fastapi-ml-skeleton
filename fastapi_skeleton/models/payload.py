@@ -1,5 +1,5 @@
-
 from typing import List
+
 from pydantic import BaseModel
 
 
@@ -23,4 +23,5 @@ def payload_to_list(hpp: HousePredictionPayload) -> List:
         hpp.population_per_block,
         hpp.average_house_occupancy,
         hpp.block_latitude,
-        hpp.block_longitude]
+        hpp.block_longitude,
+    ]

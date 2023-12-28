@@ -1,0 +1,122 @@
+[flake8]
+
+################### PROGRAM ################################
+
+# Specify the number of subprocesses that Flake8 will use to run checks in parallel.
+jobs = auto
+
+
+################### OUTPUT #################################
+
+########## Verbosity ##########
+
+# Increase the verbosity of Flake8’s output.
+verbose = 0
+# Decrease the verbosity of Flake8’s output.
+quiet = 0
+
+
+########## Formatting ##########
+
+# Select the formatter used to display errors to the user.
+format = default
+
+# Print the total number of errors.
+count = True
+# Print the source code generating the error/warning in question.
+show-source = True
+# Count the number of occurrences of each error/warning code and print a report.
+statistics = True
+
+
+########## Targets ##########
+
+# Redirect all output to the specified file.
+output-file = .flake8.log
+# Also print output to stdout if output-file has been configured.
+tee = True
+
+
+################### FILE PATTERNS ##########################
+
+# Provide a comma-separated list of glob patterns to exclude from checks.
+exclude =
+    # git folder
+    .git,
+    # python cache
+    __pycache__,
+    # pytest cache
+    .pytest_cache,
+    # mypy cache
+    .mypy_cache
+# Provide a comma-separate list of glob patterns to include for checks.
+filename =
+    *.py
+
+
+################### LINTING ################################
+
+########## Environment ##########
+
+# Provide a custom list of builtin functions, objects, names, etc.
+builtins =
+
+
+########## Options ##########
+
+# Report all errors, even if it is on the same line as a `# NOQA` comment.
+disable-noqa = False
+
+# Set the maximum length that any line (with some exceptions) may be.
+max-line-length = 88
+# Set the maximum allowed McCabe complexity value for a block of code.
+max-complexity = 10
+# Toggle whether pycodestyle should enforce matching the indentation of the opening bracket’s line.
+# incluences E131 and E133
+hang-closing = True
+
+
+########## Rules ##########
+
+# ERROR CODES
+#
+# E/W  - PEP8 errors/warnings (pycodestyle)
+# F    - linting errors (pyflakes)
+# C    - McCabe complexity error (mccabe)
+#
+# E133 - closing bracket is missing indentation (conflicts with black)
+# E203 - whitespace before ‘:’ (conflicts with black)
+# W503 - line break before binary operator
+# F401 - module imported but unused
+# F403 - ‘from module import *’ used; unable to detect undefined names
+#
+
+# Specify a list of codes to ignore.
+ignore =
+    E133,
+    E203,
+    W503
+# Specify the list of error codes you wish Flake8 to report.
+select =
+    E,
+    W,
+    F,
+    C
+# Specify a list of mappings of files and the codes that should be ignored for the entirety of the
+# file.
+per-file-ignores =
+    __init__.py:F401,F403
+
+# Enable off-by-default extensions.
+enable-extensions =
+
+
+########## Docstring ##########
+
+# Enable PyFlakes syntax checking of doctests in docstrings.
+# doctests = True
+
+# Specify which files are checked by PyFlakes for doctest syntax.
+include-in-doctest =
+# Specify which files are not to be checked by PyFlakes for doctest syntax.
+exclude-in-doctest =

@@ -1,5 +1,3 @@
-
-
 import secrets
 from typing import Optional
 
