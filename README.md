@@ -1,6 +1,6 @@
 # FastAPI Model Server Skeleton
 
-Serving machine learning models production-ready, fast, easy and secure powered by the great FastAPI by [Sebastián Ramírez]([)](https://github.com/tiangolo).
+Serving machine learning models production-ready, fast, easy and secure powered by the great FastAPI by [Sebastián Ramírez](https://github.com/tiangolo).
 
 This repository contains a skeleton app which can be used to speed-up your next machine learning project. The code is fully tested and provides a preconfigured `tox` to quickly expand this sample code.
 
